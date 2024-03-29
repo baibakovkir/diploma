@@ -38,7 +38,7 @@ X = sm.add_constant(X)  # Add a constant term for the intercept
 y = np.array(protein_full)
 
 # Fit the OLS model using stepwise regression
-model = sm.OLS(y, X).fit()
+model = sm.OLS(y, X).fit(stepwise=True)
 
 # Display the summary table of the stepwise regression results
 print(model.summary())
